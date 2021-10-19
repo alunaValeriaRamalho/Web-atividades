@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+body { 
+    color: darkslategrey;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+}
+
+h1 {
+    color: darkblue;
+    font-size: 30px;
+    text-align: center;
+}
+
+h2 {
+    background-color: lightskyblue;
+    color: darkblue;
+    font-size: 24px;  
+}
+
+h1, h2, a, a:visited {
+    color: darkblue; 
+}
+
+h1 a, h1 a:visited {
+    color: white;
+}
+
+h2 a, h2 a:visited {
+    color: lightskyblue;
+}
+
+h1:hover a, h2:hover a {
+    color: darkblue;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+   
+a:hover {
+   text-decoration: underline; 
+}
+
+.text-center {
+    text-align: center;
+}
+
+#copyright {
+    font-style: italic;
+    font-weight: bold;
+}
+
+p {
+    text-align: justify;
+    text-indent: 20px; 
+}
