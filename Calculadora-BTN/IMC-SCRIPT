@@ -1,0 +1,59 @@
+function calcularImc(){
+     
+    let altura = Number(document.querySelector("#txtaltura").value);
+    let peso = Number(document.querySelector("#txtpeso").value);
+ 
+    let imc = peso  / (altura*altura)
+    document.querySelector("#txtimc").value = imc.toFixed(1);
+ 
+    let sexo = 0;
+    if (document.querySelector("#sexM")){
+        sexo = 1;
+    } else if (document.querySelector("#sexF")){
+        sexo = 2;
+    }
+     
+    let msg = conceitoImc (imc,sexo);
+    document.querySelector("#txtcondicao").value = msg;
+     
+ 
+}
+ 
+function conceitoImc (imc, sexo){
+    let condicao = "";
+    if (sexo == 1){
+        if (imc < 20.7){
+            condicao = "abaixo do peso";
+             
+       }else if (imc >= 20.7 && imc < 26.4){
+            condicao = "no peso normal";
+             
+        }else if (imc >= 26.4 && imc < 27.8){
+            condicao = "marginalmente acima do peso";
+             
+        }else if (imc >= 27.8 && imc < 31.1){
+            condicao = "acima do peso ideal";
+             
+        }else{
+            condicao = "obeso";
+             
+        }
+         
+    } else{
+        if (imc < 19.1){
+            condicao = "abaixo do peso" ;
+        }else if (imc >= 19.1 && imc < 25.8){
+            condicao = "no peso normal";
+        }else if (imc >= 25.8 && imc < 27.3){
+            condicao = "marginalmente acima do peso";
+        }else if (imc >= 27.3 && imc < 32.3){
+            condicao = "acima do peso ideal";
+        }else{
+            condicao = "obeso";
+        }
+         
+    }
+    return condicao;
+         
+ 
+}
